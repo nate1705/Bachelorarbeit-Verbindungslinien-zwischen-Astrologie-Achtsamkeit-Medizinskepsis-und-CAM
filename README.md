@@ -1,6 +1,6 @@
 # Reproduzierbarkeit der Analysen zur Bachelorarbeit  
 **Titel der Arbeit:** *Verbindungslinien zwischen Astrologie, Achtsamkeit, Medizinskepsis und CAM*  
-**Autor:** [Dein Name]  
+**Autor:** Natalie Eisert  
 
 Dieses Repository enthält die Daten, den Programmiercode und die Abbildungen, wie sie in der Bachelorarbeit verwendet wurden. Damit können sämtliche Analysen und Darstellungen reproduziert werden.  
 
