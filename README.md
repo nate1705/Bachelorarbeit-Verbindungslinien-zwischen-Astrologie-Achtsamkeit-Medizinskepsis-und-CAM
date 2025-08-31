@@ -1,49 +1,46 @@
-# Reproduzierbarkeit der Analysen zur Bachelorarbeit  
-**Titel der Arbeit:** *Verbindungslinien zwischen Astrologie, Achtsamkeit, Medizinskepsis und CAM*  
-**Autor:** Natalie Eisert  
+# Reproduzierbarkeit der Bachelorarbeit  
+**Titel:** Verbindungslinien zwischen Astrologie, Achtsamkeit, Medizinskepsis und CAM  
 
-Dieses Repository enthält die Daten, den Programmiercode und die Abbildungen, wie sie in der Bachelorarbeit verwendet wurden. Damit können sämtliche Analysen und Darstellungen reproduziert werden.  
-
-Zur Replikation wird lediglich eine aktuelle R-Version (> 4.0) benötigt sowie die im Code angegebenen R-Pakete. Eine detaillierte Anleitung zur Installation und Reproduktion ist in der Datei `README_reproduce.md` enthalten.  
+Dieses Repository enthält die Daten und den Code, die im Rahmen der Bachelorarbeit *„Verbindungslinien zwischen Astrologie, Achtsamkeit, Medizinskepsis und CAM“* verwendet wurden.  
+Ziel ist es, die Reproduzierbarkeit der durchgeführten Kanonischen Korrelationsanalyse (KKA) sicherzustellen.  
 
 ---
 
-## Struktur des Repositories
+## Ordnerstruktur
 
-### Ordner **Data**
-- Die Datei `Daten_Fragebogen_aktuell.csv` enthält die anonymisierten Befragungsdaten, die für die Analysen genutzt wurden.  
-- Die Daten sind so aufbereitet, dass alle Ergebnisse bei Ausführung des Codes reproduziert werden können.  
+- **data/raw/**  
+  Enthält die Rohdaten der Befragung:  
+  - `Daten_Fragebogen_aktuell.csv` – anonymisierte Umfragedaten  
 
----
+- **code/**  
+  Enthält alle Skripte zur Datenaufbereitung, Modellierung und Analyse:  
+  - `00_run_all.R` – Master-Skript, das die gesamte Analysepipeline ausführt  
+  - `01_setup_and_cleaning.R` – Datenaufbereitung und Bereinigung der Rohdaten  
+  - `02_cca_models.R` – Durchführung der Kanonischen Korrelationsanalyse  
+  - `CCA sets 2.Rmd` – Dokumentation und erste Exploration der Variablensets  
+  - `cca.Rmd` – Hauptskript für Analyse, Abbildungen und Ergebnisdarstellung  
 
-### Ordner **Figures**
-- Enthält alle in der Arbeit verwendeten Abbildungen, die durch die Analyse-Skripte generiert wurden.  
-- Abbildungen sind nach Analyseabschnitten geordnet und entsprechen exakt den in der Bachelorarbeit dargestellten Grafiken.  
+- **CODEBOOK.csv**  
+  Übersicht und Beschreibung der verwendeten Variablen.  
 
----
+- **CITATION.cff**  
+  Zitationsinformationen zum Repository.  
 
-### Ordner **R Scripts**
-- `main_analysis.Rmd`: Zentrales Skript für die Durchführung der Kanonischen Korrelationsanalyse und die Erstellung der in der Arbeit gezeigten Ergebnisse.  
-- Alle weiteren Hilfsskripte (z. B. für Datenbereinigung, grafische Darstellung) sind hier abgelegt.  
-- Die Skripte sind so strukturiert, dass bei Vorliegen der Daten mit einem einzigen Lauf (`Knit to HTML/PDF`) die gesamten Ergebnisse reproduziert werden können.  
+- **LICENSE**  
+  Lizenzdatei zur Nutzung und Weitergabe.  
 
----
-
-## Reproduktion der Ergebnisse
-1. Repository herunterladen oder klonen.  
-2. Sicherstellen, dass R und RStudio installiert sind.  
-3. Die im Skript angegebenen R-Pakete installieren.  
-4. `main_analysis.Rmd` ausführen.  
-   - Die Abbildungen werden automatisch im Ordner `Figures` gespeichert.  
-   - Die Ergebnisse entsprechen den in der Arbeit berichteten Werten.  
+- **README.md**  
+  Einführung und Hinweise zur Verwendung des Repositories.  
 
 ---
 
-## Hinweis zur Transparenz
-Die Daten wurden anonymisiert und enthalten keine personenbezogenen Informationen. Repository und Daten stehen für die wissenschaftliche Nachnutzung im Sinne guter wissenschaftlicher Praxis zur Verfügung.  
+## Reproduzierbarkeit
+
+Die Ergebnisse der Arbeit lassen sich reproduzieren, indem das Skript **`00_run_all.R`** ausgeführt wird.  
+Dieses Skript lädt die Rohdaten, bereitet sie auf, führt die KKA durch und erstellt die relevanten Abbildungen.  
 
 ---
 
-## Kontakt
-Bei Fragen oder Problemen zur Reproduktion wenden Sie sich bitte an:  
-[Deine E-Mail-Adresse]  
+## Lizenz & Zitation
+
+Bitte beachten Sie die Angaben in der Datei **LICENSE** sowie die Zitationsinformationen in **CITATION.cff**.  
